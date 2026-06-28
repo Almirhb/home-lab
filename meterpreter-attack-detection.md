@@ -1,4 +1,4 @@
-# Lab 01 — Payload Delivery, Meterpreter Access & SIEM Detection
+# Lab 1 — Payload Delivery, Meterpreter Access & SIEM Detection
 
 ## Environment
 | Component | Details 
