@@ -76,7 +76,7 @@ index=* (EventCode=4688 OR EventCode=4624) | table _time EventCode Account_Name 
 | 4624 | Successful Logon | Detected |
 | 4688 | Process Creation | Detected |
 
-![Splunk Detection](screenshots/06-splunk-detection.png)
+![Splunk Detection](screenshots/06-splunk.png)
 
 ---
 
