@@ -9,6 +9,6 @@ Hands-on lab environment for practicing attack and defense techniques.
 - Hypervisor: VirtualBox
 
 ## Writeups
-| # | Lab | Tools 
+| Lab | Tools 
 
 | 01 | [Meterpreter Attack & Detection](meterpreter-attack-detection.md) | Nmap, msfvenom, Metasploit, Splunk 
