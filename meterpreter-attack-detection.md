@@ -106,9 +106,11 @@ netsh advfirewall firewall add rule name="Block Attacker" dir=in action=block re
 
 ## Tools Used
 | Tool | Purpose |
-|------|---------|
-| Network reconnaissance |
-| msfvenom | Payload creation |
-| Metasploit | Exploitation framework |
-| Splunk | SIEM & log analysis |
-| Windows Firewall | Defense & blocking |
+|---|---|
+| msfvenom | Lab payload creation |
+| Python HTTP Server | Payload delivery in isolated lab |
+| Metasploit | Listener and Meterpreter session handling |
+| Splunk Enterprise | SIEM and Windows log analysis |
+| Windows Event Logs | Security event source |
+| Windows Firewall | Defensive blocking |
+| VirtualBox | Lab virtualization |
