@@ -2,7 +2,7 @@
 
 ## Environment
 | Component | Details 
-                   
+|------|---------|                  
 | Attacker | Kali Linux 2026.1 — 192.168.56.103 
 | Target | Windows 10 VM — 192.168.56.101 
 | SIEM | Splunk Enterprise 10.4.0 
@@ -58,9 +58,7 @@ Meterpreter session 1 opened
 
 ## Phase 5 — Post Exploitation
 
-getuid
-sysinfo
-hashdump
+Post-exploitation enumeration was performed using basic Meterpreter commands such as getuid, sysinfo, and ps.
 
 ![Post Exploitation](screenshots/05-postex.png)
 
@@ -71,8 +69,8 @@ hashdump
 
 index=* (EventCode=4688 OR EventCode=4624) | table _time EventCode Account_Name Process_Name
 
-| EventCode | Description | Count |
-|-----------|-------------|-------|
+| EventCode | Description | Status |
+|---|---|---|
 | 4624 | Successful Logon | Detected |
 | 4688 | Process Creation | Detected |
 
@@ -81,8 +79,7 @@ index=* (EventCode=4688 OR EventCode=4624) | table _time EventCode Account_Name 
 ---
 
 ## Phase 7 — Incident Response & Defense
-Blocked attacker IP via Windows Firewall.
-
+Blocked inbound traffic from the attacker IP using Windows Firewall. For reverse shell scenarios, outbound connections to the attacker IP and port should also be reviewed or blocked.
 netsh advfirewall firewall add rule name="Block Attacker" dir=in action=block remoteip=192.168.56.103
 
 ![Firewall Block](screenshots/07-defense.png)
@@ -110,7 +107,7 @@ netsh advfirewall firewall add rule name="Block Attacker" dir=in action=block re
 ## Tools Used
 | Tool | Purpose |
 |------|---------|
-| Nmap | Network reconnaissance |
+| Network reconnaissance |
 | msfvenom | Payload creation |
 | Metasploit | Exploitation framework |
 | Splunk | SIEM & log analysis |
